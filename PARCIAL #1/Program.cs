@@ -10,7 +10,7 @@ class Program
         double venta1, venta2, venta3;
         double comisiones1, comisiones2, comisiones3;
         double comisionalta, mayorventa;
-        double comisionestotales,medianacomisiones,ventas;
+        double comisionestotales,medianacomisiones,comisionesmensuales,ventas;
 
         Console.WriteLine("***Venta #1***");
         Console.WriteLine("Escribir el valor en $ de la venta 1:");
@@ -46,10 +46,21 @@ class Program
             mayorventa = venta3;
         }
         comisionestotales = comisiones1 + comisiones2 + comisiones3;
-        comisionestotales = salariobase + comisionestotales;
+        comisionesmensuales = salariobase + comisionestotales;
         medianacomisiones = comisionestotales / 3;
 
         ventas = venta1 + venta2 + venta3;
+        if (ventas >= meta)
+        {
+            comisionesmensuales += 100000;
+            Console.WriteLine("Este mes cumplió con la meta y gan+o adicionalemente $100000");
+        }
+        else
+        {
+            Console.WriteLine("Desafortunadamente no alcanzó a comisionar");
+        }
+       
+        }
 
     }
-}
+
