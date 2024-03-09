@@ -59,7 +59,10 @@ class Program
         {
             Console.WriteLine("Desafortunadamente no alcanzó a comisionar");
         }
-       
+        Console.WriteLine("Su total de comision por las ventas de éste mes es: " + comisionestotales);
+        Console.WriteLine("Su salario neto es: " + comisionesmensuales);
+        Console.WriteLine("La venta con más comisión fué: " + comisionalta);
+        Console.WriteLine("Calculando el promedio de comision por una venta es: " + medianacomisiones);
         }
 
     }
